@@ -18,12 +18,7 @@ int main(int argc, char *argv[]) {
 	char zero[4096] = { 0 };
 	char buf[sw + 2][su];
 	if(argc<2) {
-		fprintf(stderr,"usage: %s <location of keyfile> [ disk disk disk\nwhere the location of the keyfile is the according sector number from .key.bmap file which should exist
-				oh fuck ops stopped making that file.. well good luck to them, then.. i cant help if they dont listen.. A) dont buy cards that randomly corrupt or lose your data B) if you do, then at least keep a key file there to reassemble them with ..   
-				
-	of course if there was a dis rebuildin, i might find two matches.. its tricky and so case by case reallly
-				
-				is a file you know is on the target disk somewhere that is at least two stripes long..without that it might be possible by looking at the filesystem structure, but that is not automated\n");
+		fprintf(stderr,"usage: %s <location of keyfile> [ disk disk disk\nwhere the location of the keyfile is the according sector number from .key.bmap file which should exist and \n",argv[0]);
 		exit(-1); }
 	while (d < (sw + 2)) {
 		disk[d] = open(argv[d + 1], O_RDONLY);
