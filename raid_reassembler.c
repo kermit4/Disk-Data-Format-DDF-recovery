@@ -18,7 +18,7 @@ int main(int argc, char *argv[]) {
 	char zero[4096] = { 0 };
 	char buf[sw + 2][su];
 	if(argc<2) {
-		fprintf(stderr,"usage: %s <location of keyfile> [ disk disk disk\nwhere the location of the keyfile is the according sector number from .key.bmap file which should exist and \n",argv[0]);
+		fprintf(stderr,"usage: %s <location of keyfile> [ disk disk disk\nwhere the location of the keyfile is the according sector number from .key.bmap file \n",argv[0]);
 		exit(-1); }
 	while (d < (sw + 2)) {
 		disk[d] = open(argv[d + 1], O_RDONLY);
